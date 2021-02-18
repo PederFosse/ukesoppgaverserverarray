@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array på server</title>
+
+    <!--bootstrap import-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <!--jquery import-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--js imports-->
+    <script src="./script.js" defer></script>
+</head>
+<body class="container">
+<h1>Lagre data i array på server</h1>
+<h2>Motorvognregister</h2>
+<form id="form">
+    <div class="row g-3 mb-3">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Personnummer" id="personnr"/>
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="navn" id="navn"/>
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="adresse" id="adresse"/>
+        </div>
+    </div>
+    <div class="row g-3 mb-3">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Kjennetegn" id="kjennetegn"/>
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Bilmerke" id="merke"/>
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Biltype" id="type"/>
+        </div>
+    </div>
+    <button class="btn btn-primary mb-5" onClick="handleFormSubmit(event)">Registrer</button>
+</form>
+<h3>Alle bilene</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Personnr</th>
+            <th>Navn</th>
+            <th>Adresse</th>
+            <th>Kjennetegn</th>
+            <th>Merke</th>
+            <th>Type</th>
+        </tr>
+    </thead>
+    <tbody id="bilTabell">
+
+    </tbody>
+</table>
+</body>
+</html>
